@@ -50,7 +50,7 @@ export default {
 </script>
 
 <template>
-  <div class="container my-3">
+  <form class="container my-3" @submit.prevent="sendEmail">
     <div class="form-floating mb-3">
       <input
         v-model="email_address"
@@ -92,7 +92,7 @@ export default {
         Send
       </button>
     </div>
-  </div>
+  </form>
 </template>
 
 <style scoped>
