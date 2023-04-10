@@ -15,7 +15,7 @@ export default {
 </script>
 <template>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="container-fluid" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <router-link to="/home" class="nav-link">Home</router-link>
