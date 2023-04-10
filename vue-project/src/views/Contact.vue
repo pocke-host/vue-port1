@@ -2,7 +2,7 @@
 import {useToast} from 'vue-toast-notification';
 import useVuelidate from '@vuelidate/core';
 import { required } from '@vuelidate/validators';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 export default {
   data() {
