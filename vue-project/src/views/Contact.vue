@@ -2,7 +2,7 @@
 import {useToast} from 'vue-toast-notification';
 import useVuelidate from '@vuelidate/core';
 import { required } from '@vuelidate/validators';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 export default {
   data() {
@@ -39,18 +39,18 @@ export default {
   methods: {
     sendEmail(e) {
       emailjs.sendForm('service_8jd5fzi', 'template_6bznafq', e.target,
-      'SkCx9ndyvfgQcWIp0', {
-        name: this.name,
-        email: this.email_address,
-        message: this.questions
-      })
+      'SkCx9ndyvfgQcWIp0').then((result) => {
+            console.log('SUCCESS!', result.text);
+        }, (error) => {
+            console.log('FAILED...', error.text);
+        });
     }
   }
 };
 </script>
 
 <template>
-  <div class="container my-3">
+  <form class="container my-3" @submit.prevent="sendEmail">
     <div class="form-floating mb-3">
       <input
         v-model="email_address"
@@ -92,7 +92,7 @@ export default {
         Send
       </button>
     </div>
-  </div>
+  </form>
 </template>
 
 <style scoped>

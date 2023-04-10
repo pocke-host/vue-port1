@@ -1,8 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Nav from '../views/Nav.vue'
-import Contact from '../views/Contact.vue';
-import Home from '../views/Home.vue';
-import Socials from '../views/Socials.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,12 +6,12 @@ const router = createRouter({
     {
       path: '/',
       name: 'nav',
-      component: Nav
+      component: () => import('../views/Nav.vue')
     },
     {
       path: '/home',
       name: 'home',
-      component: Home
+      component: () => import('../views/Home.vue')
     },
     {
       path: '/about',
@@ -28,12 +24,12 @@ const router = createRouter({
     {
       path: '/contact',
       name: 'contact',
-      component: Contact
+      component: () => import('../views/Contact.vue')
     },
     {
       path: '/social',
       name: 'socials',
-      component: Socials
+      component: () => import('../views/Socials.vue')
     },
   ]
 })
