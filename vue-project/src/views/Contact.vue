@@ -7,6 +7,9 @@ import emailjs from '@emailjs/browser';
 export default {
   data() {
     return {
+      service_id: process.env.VUE_APP_EMAILJS_SERVICE_ID,
+      template_id:proces.env.VUE_APP_EMAILJS_TEMPLATE_ID,
+      user_id: process.env.VUE_APP_EMAILJS_USER_ID, 
       v$: useVuelidate(),
       email_address: '',
       name: '',
