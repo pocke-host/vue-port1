@@ -38,13 +38,13 @@ export default {
   },
   methods: {
     sendEmail(e) {
-      emailjs.sendForm('service_8jd5fzi', 'template_6bznafq', e.target,
-      'SkCx9ndyvfgQcWIp0').then((result) => {
-            console.log('SUCCESS!', result.text);
-        }, (error) => {
-            console.log('FAILED...', error.text);
-        });
-    }
+      try {
+        emailjs.sendForm('service_8jd5fzi', 'template_6bznafq', e.target,
+        'SkCx9ndyvfgQcWIp0')
+      } catch (error) {
+        throw(e);
+      }
+    },
   }
 };
 </script>

@@ -18,9 +18,6 @@ export default {
       <div class="container-fluid" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <router-link to="/home" class="nav-link">Home</router-link>
-          </li>
-          <li class="nav-item active">
             <router-link to="/about" class="nav-link">About</router-link>
           </li>
           <li class="nav-item active">
@@ -39,11 +36,11 @@ export default {
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <!-- <div class="carousel-item active">
             <img src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2019/06/chris-ried-512801-unsplash.jpg" class="d-block w-100">
-          </div>
-          <div class="carousel-item">
-            <img src="https://www.theforage.com/blog/wp-content/uploads/2022/09/tech-companies.jpg" class="d-block w-100">
+          </div> -->
+          <div class="carousel-item active">
+            <img src="https://www.theforage.com/blog/wp-content/uploads/2022/09/tech-companies.jpg" class="d-block w-100 h-100">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
